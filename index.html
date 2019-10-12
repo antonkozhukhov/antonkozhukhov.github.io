@@ -20,20 +20,20 @@
                 <h3>Форма регистрации</h3>
                 <fieldset class="form__fieldset">
                     <div class="form__field">
-                        <input class="form__input" type="text" name="name" minlength="2" maxlength="30"  pattern= "[А-ЯЁ][а-яё]+(|-[А-ЯЁ][а-яё]+)"  placeholder="Имя" required />
+                        <input class="form__input" type="text" name="name" minlength="2" maxlength="30"  pattern= "^[А-ЯЁ][а-яё]+(|-[А-ЯЁ][а-яё]+)$"  placeholder="Имя" required />
                     </div>
                     <div class="form__field">
                         <input class="form__input" type="email" name="name" pattern="^([a-z0-9_-]+\.)*[a-z0-9_-]+@[a-z0-9_-]+(\.[a-z0-9_-]+)*\.[a-z]{2,4}$" placeholder="E-Mail" />
                         <span class="form__error">e-mail в формате: sega@yandex.ru</span>
                     </div>
                     <div class="form__field">
-                        <input class="form__input" type="text" name="name" placeholder="Телефон" pattern="((\+7\(9\d\d\)(|\s)\d\d\d-\d\d-\d\d)|(\+7\s9\d\d-\d\d\d-\d\d-\d\d)|((\+7|8)9\d\d\d\d\d\d\d\d\d\d))" minlength="" maxlength="" />
+                        <input class="form__input" type="text" name="name" placeholder="Телефон" pattern="^((\+7\(9[\d]{2}\)(|\s)[\d]{3}-[\d]{2}-[\d]{2})|(\+7\s9[\d]{2}-[\d]{3}-[\d]{2}-[\d]{2})|((\+7|8)9[\d]{9}))$" minlength="" maxlength="" />
                         <span class="form__error">телефон в формате: +7 (123) 456-78-90</span>
                     </div>
                     <div class="form__field">
                         
                         
-                      <input class="form__input" type="text" name="name" pattern="http(|s)://(((|www.)(([a-z0-9_-]*\.[a-z]{2,4}$)|((\d\d\d\.){3}\d\d\d)))|((localhost:[\d]{2,5})(|[/a-z0-9]*#?)))"  placeholder="Ваш сайт" />
+                      <input class="form__input" type="text" name="name" pattern="^http(|s):\/\/(((|www.)(([a-z0-9_-]*\.[a-z]{2,4}$)|((\d\d\d\.){3}\d\d\d)))|((localhost:[\d]{2,5})(|[/a-z0-9]*#?)))$"  placeholder="Ваш сайт" />
                         <span class="form__error">URL в формате: http://mysite.ru</span>
                     </div>
                     <button class="form__button" type="submit">Отправить</button>
